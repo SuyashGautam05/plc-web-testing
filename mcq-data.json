@@ -1,0 +1,62 @@
+{
+    "Industrial Safety and Standards/Importance_of_Safety_in_Industrial_Automation.html": {
+    "title": "Importance of Safety in Industrial Automation",
+    "questions": [
+      {
+        "id": 1,
+        "question": "The primary purpose of safety in industrial automation is to:",
+        "options": [
+          "Increase production speed only",
+          "Protect machines only",
+          "Protect human life and equipment",
+          "Reduce automation costs"
+        ],
+        "correct": 2
+      },
+      {
+        "id": 2,
+        "question": "Poor safety practices in automation can lead to:",
+        "options": [
+          "Improved efficiency",
+          "Accidents and system failures",
+          "Better product quality",
+          "Reduced maintenance"
+        ],
+        "correct": 1
+      },
+      {
+        "id": 3,
+        "question": "Safety systems in automation help to:",
+        "options": [
+          "Eliminate machines",
+          "Reduce downtime and injuries",
+          "Increase manual work",
+          "Slow down production"
+        ],
+        "correct": 1
+      },
+      {
+        "id": 4,
+        "question": "Which factor makes safety critical in automated systems?",
+        "options": [
+          "High-speed operations",
+          "Manual supervision",
+          "Low voltage usage",
+          "Simple processes"
+        ],
+        "correct": 0
+      },
+      {
+        "id": 5,
+        "question": "Safety in industrial automation is important for:",
+        "options": [
+          "Workers only",
+          "Machines only",
+          "Environment only",
+          "Workers, machines, and environment"
+        ],
+        "correct": 3
+      }
+    ]
+  }
+}

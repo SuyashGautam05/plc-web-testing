@@ -12,21 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Load MCQ data from JSON file
 function loadMCQData() {
-    // Resolve the path to mcq-data.json from the pages directory
-    // This works for both Electron and web deployments
+    // Load mcq-data.json from root directory
+    // Works for both Electron and web deployments
     const baseURL = window.location.href;
-    const isPagesDirectory = baseURL.includes('/pages/');
-    
     let dataPath;
     
-    if (isPagesDirectory) {
-        // Extract the base URL up to /pages/
+    if (baseURL.includes('/pages/')) {
+        // For pages in subdirectories, go up to root
         const pagesIndex = baseURL.indexOf('/pages/');
-        const baseDir = baseURL.substring(0, pagesIndex + 7); // includes '/pages/'
-        dataPath = baseDir + 'mcq-data.json';
+        const baseDir = baseURL.substring(0, pagesIndex); // root directory
+        dataPath = baseDir + '/mcq-data.json';
     } else {
-        // Fallback for root level (shouldn't happen but just in case)
-        dataPath = new URL('pages/mcq-data.json', window.location.origin + '/').href;
+        // For root level pages
+        dataPath = window.location.origin + '/mcq-data.json';
     }
     
     console.log('Loading MCQ data from:', dataPath);
