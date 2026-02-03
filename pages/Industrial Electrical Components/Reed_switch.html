@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLC Software</title>
+    <link rel="stylesheet" href="../defination.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header style="display: flex;">
+            <div class="logo-container">
+                <img src="../../assets/Scientech logo-2.png" alt="Scientech Logo">
+                <h1 style="margin-left: 0px;">Reed Switch</h1>
+            </div>
+        </header>
+
+        <main>
+            <a href="../../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Course
+            </a>
+
+            <div class="content-wrapper">
+                <div class="image-section">
+                    <img style="border-radius: 20px;" src="../../assets/Pages/reed_switch.png"
+                        alt="PLC Definition Illustration">
+                </div>
+
+                <div class="theory-section">
+                    <!-- <h2>Basic Switch Wiring and Configuration</h2> -->
+                    <h2>What is a Reed Switch?</h2>
+                    <p>
+                        A <strong>reed switch</strong> is an <strong>electrically operated switch</strong> that works
+                        using a magnetic field. It contains
+                        two thin metal contacts (called <strong>reeds</strong>) sealed inside a <strong>glass
+                            tube.</strong>
+                    </p>
+                    <ul>
+                        <li>Activated by a magnetic field.</li>
+                        <li>Used in position sensing applications.</li>
+                    </ul>
+                    <p><strong>Examples:</strong> Door/window sensors, security alarms, proximity sensing, speed
+                        sensors.</p>
+                    <h2>How Does a Reed Switch Work?</h2>
+                    <p>
+                        Reed switches work by reliably switching billions of operations using a simple magnet
+                        interaction to open and close contacts. First, the basic operation of a reed switch happens when
+                        it is brought into proximity of a permanent magnet, and the individual reeds become magnetized
+                        with the attractive polarity of the magnet. Second, when the external magnetic field becomes
+                        strong enough, the magnetic force of attraction closes the blades of the reed switch. Third, the
+                        magnetic field produced by the reed blades dissipate when the magnetic field is withdrawn.
+                        <br>Most importantly, since any residual magnetism on the reed blades would affect the opening
+                        and closing behavior. Therefore, the reed blades are annealed and processed removing any
+                        magnetic retention.
+                    </p>
+                    <img style="margin-left: 30px; border: 2px solid black; align-self: center;height: 400px; width: 528px;border-radius: 20px;"
+                            src="../../assets/Pages/reed_switch_working.gif" alt="">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+            <!-- MCQ Modal -->
+    <div id="mcq-modal" class="mcq-modal">
+        <div class="mcq-modal-content">
+            <div class="mcq-modal-header">
+                <h2>Multiple Choice Questions</h2>
+                <button class="close-btn" onclick="closeMCQModal()">&times;</button>
+            </div>
+            <div class="mcq-modal-body">
+                <div id="mcq-container"></div>
+            </div>
+            <div class="mcq-modal-footer">
+                <button class="reset-btn" onclick="resetMCQs()">Reset Answers</button>
+                <button class="close-modal-btn" onclick="closeMCQModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MCQ Handler Script -->
+    <script src="../mcq-handler.js"></script>
+</body>
+
+</html>

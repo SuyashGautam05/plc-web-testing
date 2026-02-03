@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLC Software</title>
+    <link rel="stylesheet" href="../defination.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header style="display: flex;">
+            <div class="logo-container">
+                <img src="../../assets/Scientech logo-2.png" alt="Scientech Logo">
+                <h1>Speed Control of AC Motors Using VFD</h1>
+            </div>
+        </header>
+
+        <main>
+            <a href="../../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Course
+            </a>
+
+            <div class="content-wrapper">
+                <div class="image-section">
+                    <img style="border-radius: 20px;" src="../../assets/Speed Control of AC Motors Using VFD.png"
+                        alt="Speed Control of AC Motors Using VFD">
+                </div>
+
+                <div class="theory-section">
+                    <!-- <h2>Basic Switch Wiring and Configuration</h2> -->
+                    <h2>Speed Control of AC Motors Using VFD</h2>
+                    <p>
+                        Speed control of AC motors using a VFD is one of the most effective and energy-efficient methods
+                        in industrial automation. A VFD allows smooth and precise speed control by regulating both
+                        frequency and voltage supplied to the motor.
+                        <br><br><b>Basic principle of speed control using VFD:</b>
+                    </p>
+                    <ul>
+                        <li>Motor speed is proportional to supply frequency.</li>
+                        <li>Reducing frequency reduces motor speed.</li>
+                        <li>Increasing frequency increases motor speed.</li>
+                    </ul>
+                    <h2>V/f Control Method</h2>
+                    <p>
+                        The most commonly used method of speed control is the constant V/f control method. In this
+                        method, the VFD maintains a constant ratio between voltage and frequency to keep motor flux
+                        constant. This ensures that the motor produces rated torque over the entire speed range.
+                        <br><br><b>Advantages of V/f control include:</b>
+                    </p>
+                    <ul>
+                        <li>Simple and reliable operation.</li>
+                        <li>Suitable for most industrial applications.</li>
+                        <li>Good torque performance at low speeds.</li>
+                    </ul>
+                    <h2>Open-Loop Speed Control</h2>
+                    <p>
+                        In open-loop control, the VFD controls motor speed without feedback from the motor. This method
+                        is widely used where high precision is not required. It is simple and cost-effective and
+                        commonly used in pumps, fans, and conveyors.
+                    </p>
+                    <h2>Closed-Loop Speed Control</h2>
+                    <p>
+                        In closed-loop control, feedback devices such as encoders are used to measure motor speed. The
+                        VFD compares the actual speed with the reference speed and adjusts output accordingly. This
+                        provides high accuracy and better dynamic response.
+                        <br><br><b>Benefits of Using VFD for Speed Control:</b>
+                    </p>
+                    <ul>
+                        <li>Smooth starting and stopping of motors.</li>
+                        <li>Reduced mechanical stress and energy consumption.</li>
+                        <li>Improved process control and flexibility.</li>
+                        <li>Extended motor and equipment life.</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Add smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+                <!-- MCQ Modal -->
+    <div id="mcq-modal" class="mcq-modal">
+        <div class="mcq-modal-content">
+            <div class="mcq-modal-header">
+                <h2>Multiple Choice Questions</h2>
+                <button class="close-btn" onclick="closeMCQModal()">&times;</button>
+            </div>
+            <div class="mcq-modal-body">
+                <div id="mcq-container"></div>
+            </div>
+            <div class="mcq-modal-footer">
+                <button class="reset-btn" onclick="resetMCQs()">Reset Answers</button>
+                <button class="close-modal-btn" onclick="closeMCQModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MCQ Handler Script -->
+    <script src="../mcq-handler.js"></script>
+</body>
+
+</html>
