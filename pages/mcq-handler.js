@@ -53,15 +53,23 @@ function loadMCQData() {
 function getCurrentPagePath() {
     const currentURL = window.location.pathname;
     
-    // Find 'pages' index and build path from there
-    const pagesIndex = currentURL.toLowerCase().indexOf('/pages/');
+    // Find 'pages' index (case-insensitive) and build path from there
+    const lowerURL = currentURL.toLowerCase();
+    const pagesIndex = lowerURL.indexOf('/pages/');
     
     if (pagesIndex !== -1) {
-        // Extract everything after '/pages/'
+        // Extract everything after '/pages/' - preserving original case
         const relativePath = currentURL.substring(pagesIndex + 7); // '/pages/'.length = 7
         const decodedPath = decodeURIComponent(relativePath);
-        console.log('Detected page path:', decodedPath);
-        return decodedPath;
+        
+        // Ensure the path ends with .html if it doesn't already
+        let finalPath = decodedPath;
+        if (!finalPath.toLowerCase().endsWith('.html')) {
+            finalPath += '.html';
+        }
+        
+        console.log('Detected page path:', finalPath);
+        return finalPath;
     }
     
     // Fallback: try to get from window.location directly
@@ -71,8 +79,15 @@ function getCurrentPagePath() {
     for (let i = 0; i < pathParts.length; i++) {
         if (pathParts[i].toLowerCase() === 'pages' && i < pathParts.length - 1) {
             const relativePath = pathParts.slice(i + 1).join('/');
-            console.log('Detected page path (fallback):', relativePath);
-            return decodeURIComponent(relativePath);
+            let finalPath = decodeURIComponent(relativePath);
+            
+            // Ensure the path ends with .html
+            if (!finalPath.toLowerCase().endsWith('.html')) {
+                finalPath += '.html';
+            }
+            
+            console.log('Detected page path (fallback):', finalPath);
+            return finalPath;
         }
     }
     
